@@ -132,8 +132,12 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:.85rem;bord
 <footer>© 2026 Jahid Hasan Rajon · EEE, AIUB</footer>
 <script>
 // To add your introduction video, paste the YouTube video ID below (the part after v= in the link).
-var VIDEO_ID="";
-if(VIDEO_ID){document.getElementById("vid").innerHTML='<iframe src="https://www.youtube.com/embed/'+VIDEO_ID+'" title="Introduction video" allowfullscreen></iframe>'}
+var VIDEO_ID="https://drive.google.com/file/d/10fgX8a1R5i_GdVLsY_lmEfAgfxm5sOXH/view?usp=sharing";
+
+if(VIDEO_ID){
+    document.getElementById("vid").innerHTML =
+    '<iframe src="'+VIDEO_ID+'" title="Introduction video" allowfullscreen></iframe>';
+}
 document.getElementById("nt").onclick=function(){document.getElementById("nl").classList.toggle("open")};
 document.querySelectorAll("#nl a").forEach(function(a){a.onclick=function(){document.getElementById("nl").classList.remove("open")}});
 document.getElementById("tt").onclick=function(){var d=document.documentElement,n=d.getAttribute("data-theme")==="dark"?"light":"dark";d.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}};
